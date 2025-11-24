@@ -1,15 +1,16 @@
 #!/bin/bash
 
 FELIX=$1
-TEST=$2
+DIR=$2
+TEST=$3
 
-$1 $2 1> /dev/null 2> /dev/null
+$1 $2/$3 1> /dev/null 2> /dev/null
 RET=$?
 
 if [ $RET -ne 0 ]; then
-    name=$(basename "$TEST")
-    echo "Test $name failed with $RET."
+    echo "Test $TEST failed with $RET."
     exit 1
 fi
 
+echo "Test $TEST succeeded."
 exit 0

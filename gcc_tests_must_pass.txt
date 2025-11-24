@@ -776,7 +776,6 @@
 32/xop-vpermil2ps-256-1.c.gcc-target-test-32
 32/xop-vshift-1.c.gcc-target-test-32
 32/xop-vshift-2.c.gcc-target-test-32
-64
 64/20000614-1.c.gcc-target-test-64
 64/20000614-2.c.gcc-target-test-64
 64/20011009-1.c.gcc-target-test-64

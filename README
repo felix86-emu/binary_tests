@@ -1,0 +1,14 @@
+# Where to find source code for these tests?
+
+Binaries: https://github.com/FEX-Emu/fex-gcc-target-tests-bins
+Source: 5d01fc7c11606fa0fa36210309df6b10b6e07775 from https://github.com/gcc-mirror/gcc
+
+Binaries: https://github.com/FEX-Emu/fex-gvisor-tests-bins
+Source: 11787a601e2aba4d022aadd468f729963b9a09e6 from https://github.com/google/gvisor/tree/master/test/syscalls/linux
+
+Binaries: https://github.com/FEX-Emu/fex-posixtest-bins
+Source: posixtest 1.5.2 https://posixtest.sourceforge.net/
+
+Valgrind binaries source code: https://sourceware.org/git/valgrind.git
+
+A zip with all the binaries is downloaded using install-tests.sh
