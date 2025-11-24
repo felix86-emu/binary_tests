@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 FELIX="$1"
 DIR="$2"
 
@@ -21,4 +19,12 @@ if [ ! -x "$FELIX" ]; then
     exit 1
 fi
 
-xargs -P4 -I{} sh -c "./run-single-test.sh $FELIX $DIR/fex-gcc-target-tests-bins/{}" < gcc_tests_must_pass.txt
+xargs -P$(nproc) -I{} sh -c "./run-single-test.sh $FELIX $DIR/fex-gcc-target-tests-bins/{}" < gcc_tests_must_pass.txt
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "Failed some tests"
+    exit 1
+fi
+
+echo "All tests passed!"
+exit 0

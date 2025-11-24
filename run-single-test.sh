@@ -3,7 +3,7 @@
 FELIX=$1
 TEST=$2
 
-$1 $2
+$1 $2 1> /dev/null 2> /dev/null
 RET=$?
 
 if [ $RET -ne 0 ]; then
