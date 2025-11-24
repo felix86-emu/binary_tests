@@ -1497,3 +1497,5 @@
 64/sse2-mmx-psllw.c.gcc-target-test-64
 64/sse2-mmx-psrld.c.gcc-target-test-64
 64/sse2-mmx-psrlw.c.gcc-target-test-64
+32/sse2-maskmovdqu.c.gcc-target-test-32
+64/sse2-maskmovdqu.c.gcc-target-test-64
