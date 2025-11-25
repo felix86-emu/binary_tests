@@ -33,5 +33,19 @@ if [ $RET -ne 0 ]; then
     exit 1
 fi
 
+xargs -P$(nproc) -I{} sh -c "./run-single-test.sh $FELIX $DIR/valgrind-tests-bins/ {} 0" < valgrind_tests_must_pass.txt
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "Failed some tests"
+    exit 1
+fi
+
+xargs -P$(nproc) -I{} sh -c "./run-single-test-expect-fail.sh $FELIX $DIR/valgrind-tests-bins/ {} 0" < valgrind_tests_known_failure.txt
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "Failed some tests"
+    exit 1
+fi
+
 echo "All tests passed!"
 exit 0
