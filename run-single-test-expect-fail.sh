@@ -8,7 +8,7 @@ SUCCESS_RET=$4
 $1 $2/$3 1> /dev/null 2> /dev/null
 RET=$?
 
-if [ $RET -e 0 ]; then
+if [ $RET -eq $SUCCESS_RET ]; then
     echo "Test $TEST succeeded with $RET but I expected it to fail."
     exit 1
 fi
