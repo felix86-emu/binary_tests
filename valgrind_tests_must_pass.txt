@@ -37,3 +37,4 @@ amd64/smc1
 amd64/ssse3_misaligned
 amd64/x87trigOOR
 amd64/xacq_xrel
+amd64/sse4-64

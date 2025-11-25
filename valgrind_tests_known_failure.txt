@@ -22,6 +22,5 @@ amd64/pcmpxstrx64
 amd64/rdrand
 amd64/rdseed
 amd64/tm1
-amd64/sse4-64
 amd64/fb_test_amd64
 amd64/amd64locked succeeded.

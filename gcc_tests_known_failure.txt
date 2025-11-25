@@ -19,8 +19,6 @@
 64/pr36578-1.c.gcc-target-test-64
 64/pr36578-2.c.gcc-target-test-64
 64/pr72867.c.gcc-target-test-64
-64/sse4_1-dppd-1.c.gcc-target-test-64
-64/sse4_1-dppd-2.c.gcc-target-test-64
 64/sse4_1-mpsadbw.c.gcc-target-test-64
 64/sse4_1-ceilf-vec.c.gcc-target-test-64
 64/sse4_1-floorf-sfix-vec.c.gcc-target-test-64
