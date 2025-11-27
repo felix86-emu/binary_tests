@@ -16,8 +16,6 @@ amd64/faultstatus
 amd64/insn_fpu
 amd64/mpx
 amd64/movbe
-amd64/pcmpxstrx64w
-amd64/pcmpxstrx64
 amd64/rdrand
 amd64/rdseed
 amd64/tm1
