@@ -47,5 +47,19 @@ if [ $RET -ne 0 ]; then
     exit 1
 fi
 
+xargs -P$(nproc) -I{} sh -c "./run-single-test.sh $FELIX $DIR/libuv-tests {} 0" < libuv_tests_must_pass.txt
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "Failed some tests"
+    exit 1
+fi
+
+xargs -P$(nproc) -I{} sh -c "./run-single-test.sh $FELIX $DIR/libuv-tests {} 0" < libuv_tests_known_failures.txt
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "Failed some tests"
+    exit 1
+fi
+
 echo "All tests passed!"
 exit 0

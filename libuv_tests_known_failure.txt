@@ -1,0 +1,12 @@
+uv_run_tests_a fs_event_watch_invalid_path
+uv_run_tests_a fs_file_nametoolong
+uv_run_tests_a fs_fstat
+uv_run_tests_a fs_read_bufs
+uv_run_tests_a fs_write_alotof_bufs_with_offset
+uv_run_tests_a fs_write_multiple_bufs
+uv_run_tests_a pipe_bind_error_addrnotavail
+uv_run_tests_a pipe_connect_bad_name
+uv_run_tests_a pipe_connect_on_prepare
+uv_run_tests_a pipe_getsockname
+uv_run_tests_a tcp_try_write_error
+uv_run_tests_a tcp_writealot

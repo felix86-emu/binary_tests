@@ -11,4 +11,7 @@ Source: posixtest 1.5.2 https://posixtest.sourceforge.net/
 
 Valgrind binaries source code: https://sourceware.org/git/valgrind.git
 
+Libuv binaries source code: https://github.com/libuv/libuv
+Commit: 8fc7034
+
 A zip with all the binaries is downloaded using install-tests.sh

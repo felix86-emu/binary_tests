@@ -19,6 +19,9 @@ curl -k -L https://cdn.felix86.com/tests/felix86-binary-tests.zip -o /tmp/felix8
 mkdir -p $DIR
 unzip -qq -o -d $DIR /tmp/felix86-tests/felix86-binary-tests.zip
 mv $DIR/binary_tests-main/* $DIR/
+curl -k -L http://cdn.felix86.com/tests/libuv-tests.zip -o /tmp/felix86-tests/libuv-tests.zip
+unzip -qq -o -d $DIR /tmp/felix86-tests/libuv-tests.zip
 rmdir $DIR/binary_tests-main
 rm /tmp/felix86-tests/felix86-binary-tests.zip
+rm /tmp/felix86-tests/libuv-tests.zip
 rmdir /tmp/felix86-tests
