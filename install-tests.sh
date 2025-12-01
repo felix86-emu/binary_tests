@@ -9,19 +9,37 @@ if [ -z "$DIR" ]; then
     exit 1
 fi
 
-if [ -d "$DIR" ]; then
-    echo "Directory $DIR already exists. Remove it and all its contents to install the tests."
-    exit 1
+mkdir -p $DIR
+
+download_and_unzip() {
+    local URL="$1"
+    echo "Downloading $URL..."
+    curl -k -L "$URL" -o $DIR/downloading.zip
+    echo "Downloaded"
+    echo "Unzipping..."
+    unzip -qq -o -d $DIR $DIR/downloading.zip
+    echo "Unzipped"
+    rm $DIR/downloading.zip
+}
+
+SHOULD_DOWNLOAD=0
+echo "Getting version.txt..."
+curl -sL https://cdn.felix86.com/tests/version.txt > $DIR/version.txt.tmp
+if [[ ! -f "$DIR/version.txt" ]]; then
+    echo "First time downloading test binaries!"
+    SHOULD_DOWNLOAD=1
+else
+    if [[ "$(cat "$DIR/version.txt.tmp")" != "$(cat "$DIR/version.txt")" ]]; then
+        echo "Test binary version changed, starting new download"
+        SHOULD_DOWNLOAD=1
+    fi
 fi
 
-mkdir -p /tmp/felix86-tests
-curl -k -L https://cdn.felix86.com/tests/felix86-binary-tests.zip -o /tmp/felix86-tests/felix86-binary-tests.zip
-mkdir -p $DIR
-unzip -qq -o -d $DIR /tmp/felix86-tests/felix86-binary-tests.zip
-mv $DIR/binary_tests-main/* $DIR/
-curl -k -L http://cdn.felix86.com/tests/libuv-tests.zip -o /tmp/felix86-tests/libuv-tests.zip
-unzip -qq -o -d $DIR /tmp/felix86-tests/libuv-tests.zip
-rmdir $DIR/binary_tests-main
-rm /tmp/felix86-tests/felix86-binary-tests.zip
-rm /tmp/felix86-tests/libuv-tests.zip
-rmdir /tmp/felix86-tests
+if [[ $SHOULD_DOWNLOAD -eq 1 ]]; then
+    download_and_unzip "https://cdn.felix86.com/tests/felix86-binary-tests.zip"
+    download_and_unzip "https://cdn.felix86.com/tests/libuv-tests.zip"
+    mv $DIR/version.txt.tmp $DIR/version.txt
+else
+    echo "Test binaries already at the latest version!"
+    rm $DIR/version.txt.tmp
+fi
