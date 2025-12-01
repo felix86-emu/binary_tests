@@ -14,7 +14,7 @@ mkdir -p $DIR
 download_and_unzip() {
     local URL="$1"
     echo "Downloading $URL..."
-    curl -k -L "$URL" -o $DIR/downloading.zip
+    curl -L "$URL" -o - > $DIR/downloading.zip
     echo "Downloaded"
     echo "Unzipping..."
     unzip -qq -o -d $DIR $DIR/downloading.zip
