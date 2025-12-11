@@ -72,7 +72,7 @@ if [ $RET -ne 0 ]; then
     exit 1
 fi
 
-if [ "$JAR_OUTPUT" -ne "Hello world from HelloWorld.jar!" ]; then
+if [ "$JAR_OUTPUT" != "Hello world from HelloWorld.jar!" ]; then
     echo "Failed some tests"
     echo "JAR returned: $JAR_OUTPUT"
     exit 1
@@ -81,14 +81,14 @@ else
 fi
 
 echo "Running Node test..."
-NODE_OUTPUT=$(FELIX86_QUIET=1 $FELIX $DIR/node/bin/node -e "console.log(\"hello\")")
+NODE_OUTPUT=$($FELIX $DIR/node/bin/node -e "console.log(\"hello\")")
 RET=$?
 if [ $RET -ne 0 ]; then
     echo "Failed some tests"
     exit 1
 fi
 
-if [ "$NODE_OUTPUT" -ne "hello" ]; then
+if [ "$NODE_OUTPUT" != "hello" ]; then
     echo "Failed some tests"
     echo "Node returned: $NODE_OUTPUT"
     exit 1
