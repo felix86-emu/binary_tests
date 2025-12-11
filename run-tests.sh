@@ -64,7 +64,8 @@ fi
 # Run the runtime tests
 
 echo "Running JAR test..."
-JAR_OUTPUT=$(FELIX86_QUIET=1 cd $DIR/jre && $FELIX $DIR/jre/bin/java -jar ./helloworld.jar) 
+export FELIX86_QUIET=1
+JAR_OUTPUT=$(cd $DIR/jdk && $FELIX $DIR/jdk/bin/java -jar ./helloworld.jar) 
 RET=$?
 if [ $RET -ne 0 ]; then
     echo "Failed some tests"
