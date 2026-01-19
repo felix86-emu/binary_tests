@@ -5,7 +5,7 @@ DIR=$2
 TEST=$3
 SUCCESS_RET=$4
 
-$1 $2 $3 1> /dev/null 2> /dev/null
+$1 $2 $3 $3 1> /dev/null 2> /dev/null
 RET=$?
 
 if [ $RET -eq $SUCCESS_RET ]; then
