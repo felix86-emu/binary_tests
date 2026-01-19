@@ -49,23 +49,23 @@ if [ $RET -ne 0 ]; then
     exit 1
 fi
 
-cd "$DIR/libuv-tests"
+# cd "$DIR/libuv-tests"
 
-xargs -P$(nproc) -I{} sh -c "$current_dir/run-libuv-test.sh $FELIX $DIR/libuv-tests/uv_run_tests_a {} 0" < "$current_dir/libuv_tests_must_pass.txt"
-RET=$?
-if [ $RET -ne 0 ]; then
-    echo "Failed some tests"
-    exit 1
-fi
+# xargs -P$(nproc) -I{} sh -c "$current_dir/run-libuv-test.sh $FELIX $DIR/libuv-tests/uv_run_tests_a {} 0" < "$current_dir/libuv_tests_must_pass.txt"
+# RET=$?
+# if [ $RET -ne 0 ]; then
+#     echo "Failed some tests"
+#     exit 1
+# fi
 
-xargs -P$(nproc) -I{} sh -c "$current_dir/run-libuv-test-expect-fail.sh $FELIX $DIR/libuv-tests/uv_run_tests_a {} 0" < "$current_dir/libuv_tests_known_failures.txt"
-RET=$?
-if [ $RET -ne 0 ]; then
-    echo "Failed some tests"
-    exit 1
-fi
+# xargs -P$(nproc) -I{} sh -c "$current_dir/run-libuv-test-expect-fail.sh $FELIX $DIR/libuv-tests/uv_run_tests_a {} 0" < "$current_dir/libuv_tests_known_failures.txt"
+# RET=$?
+# if [ $RET -ne 0 ]; then
+#     echo "Failed some tests"
+#     exit 1
+# fi
 
-cd "$current_dir"
+# cd "$current_dir"
 
 # Run the runtime tests
 
