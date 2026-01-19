@@ -47,6 +47,9 @@ if [ $RET -ne 0 ]; then
     exit 1
 fi
 
+current_dir=$(pwd)
+cd "$DIR/libuv-tests"
+
 xargs -P$(nproc) -I{} sh -c "./run-single-test-arg.sh $FELIX $DIR/libuv-tests/uv_run_tests_a {} 0" < libuv_tests_must_pass.txt
 RET=$?
 if [ $RET -ne 0 ]; then
@@ -60,6 +63,8 @@ if [ $RET -ne 0 ]; then
     echo "Failed some tests"
     exit 1
 fi
+
+cd "$current_dir"
 
 # Run the runtime tests
 
