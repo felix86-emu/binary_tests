@@ -58,7 +58,7 @@ if [ $RET -ne 0 ]; then
     exit 1
 fi
 
-xargs -P$(nproc) -I{} sh -c "$current_dir/run-single-test-arg-expect-fail.sh $FELIX $DIR/libuv-tests/uv_run_tests_a {} 0" < "$current_dir/libuv_tests_known_failures.txt"
+xargs -P$(nproc) -I{} sh -c "$current_dir/run-libuv-test-expect-fail.sh $FELIX $DIR/libuv-tests/uv_run_tests_a {} 0" < "$current_dir/libuv_tests_known_failures.txt"
 RET=$?
 if [ $RET -ne 0 ]; then
     echo "Failed some tests"
