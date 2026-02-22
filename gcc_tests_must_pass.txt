@@ -1503,3 +1503,5 @@
 64/sse4_1-dppd-2.c.gcc-target-test-64
 64/sse4_1-mpsadbw.c.gcc-target-test-64
 64/ssse3-palignr.c.gcc-target-test-64
+32/pr57275.c.gcc-target-test-32
+64/pr57275.c.gcc-target-test-64
