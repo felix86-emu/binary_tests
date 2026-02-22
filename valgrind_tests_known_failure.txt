@@ -1,8 +1,6 @@
 amd64/aes
 amd64/avx-1
-amd64/avx-vmovq
 amd64/avx2-1
-amd64/avx_estimate_insn
 amd64/bmi
 amd64/fma
 amd64/fma4
@@ -10,7 +8,6 @@ amd64/fxtract
 amd64/bug485148
 amd64/filter_cpuid
 amd64/filter_inf_nan
-amd64/f16c
 amd64/filter_stderr
 amd64/faultstatus
 amd64/insn_fpu
