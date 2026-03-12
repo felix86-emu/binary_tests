@@ -102,5 +102,21 @@ else
     echo "Node test passed"
 fi
 
+echo "Running Go test..."
+GO_OUTPUT=$($FELIX $DIR/go/main)
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "Failed some tests"
+    exit 1
+fi
+
+if [ "$GO_OUTPUT" != "Hello, World!" ]; then
+    echo "Failed some tests"
+    echo "Go returned: $GO_OUTPUT"
+    exit 1
+else
+    echo "Go test passed"
+fi
+
 echo "All tests passed!"
 exit 0
