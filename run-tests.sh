@@ -35,6 +35,20 @@ if [ $RET -ne 0 ]; then
     exit 1
 fi
 
+xargs -P$(nproc) -I{} sh -c "$current_dir/run-single-test.sh $FELIX $DIR/signal_tests/ {} 0" < "$current_dir/signal_tests_must_pass.txt"
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "Failed some tests"
+    exit 1
+fi
+
+xargs -P$(nproc) -I{} sh -c "$current_dir/run-single-test-expect-fail.sh $FELIX $DIR/signal_tests/ {} 0" < "$current_dir/signal_tests_known_failure.txt"
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "Failed some tests"
+    exit 1
+fi
+
 xargs -P$(nproc) -I{} sh -c "$current_dir/run-single-test.sh $FELIX $DIR/valgrind-tests-bins/ {} 0" < "$current_dir/valgrind_tests_must_pass.txt"
 RET=$?
 if [ $RET -ne 0 ]; then
@@ -102,21 +116,23 @@ else
     echo "Node test passed"
 fi
 
-# echo "Running Go test..."
-# GO_OUTPUT=$($FELIX $DIR/go/main)
-# RET=$?
-# if [ $RET -ne 0 ]; then
-#     echo "Failed some tests"
-#     exit 1
-# fi
+echo "Running Go test..."
+GO_OUTPUT=$($FELIX $DIR/go/main)
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "Failed some tests"
+    exit 1
+fi
 
-# if [ "$GO_OUTPUT" != "Hello, World!" ]; then
-#     echo "Failed some tests"
-#     echo "Go returned: $GO_OUTPUT"
-#     exit 1
-# else
-#     echo "Go test passed"
-# fi
+if [ "$GO_OUTPUT" != "Hello, World!" ]; then
+    echo "Failed some tests"
+    echo "Go returned: $GO_OUTPUT"
+    exit 1
+else
+    echo "Go test passed"
+fi
+
+
 
 echo "All tests passed!"
 exit 0

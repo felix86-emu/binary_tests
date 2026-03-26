@@ -1,0 +1,2 @@
+restartable-signal-32.out
+restartable-signal-64.out
