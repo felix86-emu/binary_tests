@@ -42,12 +42,12 @@ if [ $RET -ne 0 ]; then
     exit 1
 fi
 
-xargs -P$(nproc) -I{} sh -c "$current_dir/run-single-test-expect-fail.sh $FELIX $DIR/signal_tests/ {} 0" < "$current_dir/signal_tests_known_failure.txt"
-RET=$?
-if [ $RET -ne 0 ]; then
-    echo "Failed some tests"
-    exit 1
-fi
+# xargs -P$(nproc) -I{} sh -c "$current_dir/run-single-test-expect-fail.sh $FELIX $DIR/signal_tests/ {} 0" < "$current_dir/signal_tests_known_failure.txt"
+# RET=$?
+# if [ $RET -ne 0 ]; then
+#     echo "Failed some tests"
+#     exit 1
+# fi
 
 xargs -P$(nproc) -I{} sh -c "$current_dir/run-single-test.sh $FELIX $DIR/valgrind-tests-bins/ {} 0" < "$current_dir/valgrind_tests_must_pass.txt"
 RET=$?

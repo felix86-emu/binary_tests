@@ -68,3 +68,5 @@ two-signals-alt-stack-disarm-32.out
 two-signals-alt-stack-disarm-64.out
 uc_mask-32.out
 uc_mask-64.out
+restartable-signal-32.out
+restartable-signal-64.out
