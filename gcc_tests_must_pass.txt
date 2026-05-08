@@ -1489,3 +1489,5 @@
 64/ssse3-palignr.c.gcc-target-test-64
 32/pr57275.c.gcc-target-test-32
 64/pr57275.c.gcc-target-test-64
+32/pr72867.c.gcc-target-test-32
+64/pr72867.c.gcc-target-test-64
