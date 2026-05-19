@@ -44,3 +44,5 @@ amd64/pcmpxstrx64
 amd64/f16c
 amd64/avx-vmovq
 amd64/avx_estimate_insn
+amd64/bug485148
+amd64/fma

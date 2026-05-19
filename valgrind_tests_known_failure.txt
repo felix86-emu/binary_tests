@@ -2,10 +2,8 @@ amd64/aes
 amd64/avx-1
 amd64/avx2-1
 amd64/bmi
-amd64/fma
 amd64/fma4
 amd64/fxtract
-amd64/bug485148
 amd64/filter_cpuid
 amd64/filter_inf_nan
 amd64/filter_stderr
