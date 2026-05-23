@@ -46,3 +46,4 @@ amd64/avx-vmovq
 amd64/avx_estimate_insn
 amd64/bug485148
 amd64/fma
+amd64/avx-1
