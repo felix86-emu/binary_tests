@@ -83,6 +83,8 @@ fi
 
 # Run the runtime tests
 
+export FELIX86_ALWAYS_TSO=1
+
 echo "Running JAR test..."
 export FELIX86_QUIET=1
 JAR_OUTPUT=$(cd $DIR/jdk && $FELIX $DIR/jdk/bin/java -jar ./helloworld.jar) 
