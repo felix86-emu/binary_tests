@@ -47,3 +47,5 @@ amd64/avx_estimate_insn
 amd64/bug485148
 amd64/fma
 amd64/avx-1
+amd64/avx2-1
+amd64/aes
