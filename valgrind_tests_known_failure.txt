@@ -1,4 +1,3 @@
-amd64/bmi
 amd64/fma4
 amd64/fxtract
 amd64/filter_cpuid
