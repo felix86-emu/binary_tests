@@ -50,3 +50,4 @@ amd64/avx-1
 amd64/avx2-1
 amd64/aes
 amd64/bmi
+amd64/movbe

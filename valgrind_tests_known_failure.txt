@@ -6,7 +6,6 @@ amd64/filter_stderr
 amd64/faultstatus
 amd64/insn_fpu
 amd64/mpx
-amd64/movbe
 amd64/rdrand
 amd64/rdseed
 amd64/tm1
