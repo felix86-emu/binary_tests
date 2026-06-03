@@ -18,6 +18,12 @@ pause-pc-rax-32.out
 pause-pc-rax-64.out
 resethand-32.out
 resethand-64.out
+restartable-read-32.out
+restartable-read-64.out
+restartable-sem_wait-32.out
+restartable-sem_wait-64.out
+restartable-write-32.out
+restartable-write-64.out
 rt-order-32.out
 rt-order-64.out
 rt-order-only-one-32.out
@@ -26,6 +32,8 @@ same-signal-32.out
 same-signal-64.out
 segments-32.out
 segments-64.out
+sigdfl-all-32.out
+sigdfl-all-64.out
 sigdfl-segv-32.out
 sigdfl-segv-64.out
 sigdfl-urg-32.out
@@ -56,8 +64,12 @@ synchronous-int3-32.out
 synchronous-int3-64.out
 synchronous-null-32.out
 synchronous-null-64.out
+synchronous-rip-32.out
+synchronous-rip-64.out
 synchronous-ud2-32.out
 synchronous-ud2-64.out
+syscall-sigign-32.out
+syscall-sigign-64.out
 thread-inherit-32.out
 thread-inherit-64.out
 two-signals-32.out
@@ -68,9 +80,3 @@ two-signals-alt-stack-disarm-32.out
 two-signals-alt-stack-disarm-64.out
 uc_mask-32.out
 uc_mask-64.out
-restartable-read-32.out
-restartable-read-64.out
-restartable-write-32.out
-restartable-write-64.out
-restartable-sem_wait-32.out
-restartable-sem_wait-64.out
