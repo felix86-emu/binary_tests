@@ -135,7 +135,7 @@ else
 fi
 
 echo "Running bubblewrap test..."
-BWRAP_OUTPUT=$($FELIX $DIR/bubblewrap/bwrap --ro-bind / / -- /bin/sh -c 'echo Hello && exit 42')
+BWRAP_OUTPUT=$($FELIX $DIR/bubblewrap/bwrap --dev-bind / / -- /bin/sh -c 'echo Hello && exit 42')
 RET=$?
 if [ $RET -ne 42 ]; then
     echo "Failed some tests"
