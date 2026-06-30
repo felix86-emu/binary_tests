@@ -142,7 +142,7 @@ if [ $RET -ne 42 ]; then
     exit 1
 fi
 
-if [ "$GO_OUTPUT" != "Hello" ]; then
+if [ "$BWRAP_OUTPUT" != "Hello" ]; then
     echo "Failed some tests"
     echo "bwrap returned: $BWRAP_OUTPUT $RET"
     exit 1
