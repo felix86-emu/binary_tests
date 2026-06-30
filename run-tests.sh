@@ -134,7 +134,21 @@ else
     echo "Go test passed"
 fi
 
+echo "Running bubblewrap test..."
+BWRAP_OUTPUT=$($FELIX $DIR/bubblewrap/bwrap --ro-bind / / -- /bin/sh -c 'echo Hello && exit 42')
+RET=$?
+if [ $RET -ne 42 ]; then
+    echo "Failed some tests"
+    exit 1
+fi
 
+if [ "$GO_OUTPUT" != "Hello" ]; then
+    echo "Failed some tests"
+    echo "bwrap returned: $BWRAP_OUTPUT $RET"
+    exit 1
+else
+    echo "bwrap test passed"
+fi
 
 echo "All tests passed!"
 exit 0

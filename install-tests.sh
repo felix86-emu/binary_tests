@@ -40,6 +40,7 @@ if [[ $SHOULD_DOWNLOAD -eq 1 ]]; then
     download_and_unzip "https://cdn.felix86.com/tests/libuv-tests.zip"
     download_and_unzip "https://cdn.felix86.com/tests/runtimes.zip"
     download_and_unzip "https://cdn.felix86.com/tests/signal_tests.zip"
+    download_and_unzip "https://cdn.felix86.com/tests/bwrap.zip"
     mv $DIR/version.txt.tmp $DIR/version.txt
 else
     echo "Test binaries already at the latest version!"
