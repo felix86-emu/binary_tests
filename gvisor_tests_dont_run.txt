@@ -20,3 +20,8 @@ tcp_socket_test
 timerfd_test
 vfork_test
 wait_test
+
+
+This expects a hardcoded value which isn't true for our CI environment and we can't set it without root perms
+
+proc_pid_oomscore_test

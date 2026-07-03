@@ -57,7 +57,6 @@ preadv_test
 priority_test
 proc_net_tcp_test
 proc_net_unix_test
-proc_pid_oomscore_test
 proc_pid_smaps_test
 proc_pid_uid_gid_map_test
 pty_root_test
