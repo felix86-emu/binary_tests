@@ -1,9 +1,6 @@
 32bit_test
 aio_test
-arch_prctl_test
-bad_test
 bind_test
-chmod_test
 connect_external_test
 eventfd_test
 exceptions_test

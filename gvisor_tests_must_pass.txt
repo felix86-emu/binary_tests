@@ -2,8 +2,11 @@ accept_bind_stream_test
 accept_bind_test
 access_test
 affinity_test
+arch_prctl_test
+bad_test
 brk_test
 chdir_test
+chmod_test
 chown_test
 chroot_test
 clock_getres_test
