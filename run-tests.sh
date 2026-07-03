@@ -81,9 +81,25 @@ fi
 
 # cd "$current_dir"
 
-# Run the runtime tests
-
 export FELIX86_ALWAYS_TSO=1
+export TEST_TMPDIR=$(mktemp -d)
+
+
+xargs -P$(nproc) -I{} sh -c "$current_dir/run-single-test.sh $FELIX $DIR/fex-gvisor-tests-bins/ {} 0" < "$current_dir/gvisor_tests_must_pass.txt"
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "Failed some tests"
+    exit 1
+fi
+
+xargs -P$(nproc) -I{} sh -c "$current_dir/run-single-test-expect-fail.sh $FELIX $DIR/fex-gvisor-tests-bins/ {} 0" < "$current_dir/gvisor_tests_known_failure.txt"
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "Failed some tests"
+    exit 1
+fi
+
+# Run the runtime tests
 
 echo "Running JAR test..."
 export FELIX86_QUIET=1

@@ -1,0 +1,22 @@
+These tests timeout so we don't run them
+
+alarm_test
+flock_test
+futex_test
+inotify_test
+pipe_test
+ppoll_test
+pselect_test
+pty_test
+sigstop_test
+sigtimedwait_test
+socket_inet_loopback_test
+socket_ip_tcp_generic_loopback_test
+socket_ipv4_udp_unbound_loopback_test
+socket_ipv6_udp_unbound_external_networking_test
+socket_stress_test
+splice_test
+tcp_socket_test
+timerfd_test
+vfork_test
+wait_test
