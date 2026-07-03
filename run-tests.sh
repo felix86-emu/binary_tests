@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Set soft limit of fds to hard limit, some tests open many fds
+ulimit -n $(ulimit -Hn)
+
 FELIX="$1"
 DIR="$2"
 

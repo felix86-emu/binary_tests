@@ -131,3 +131,4 @@ vdso_test
 vsyscall_test
 write_test
 xattr_test
+socket_ipv4_udp_unbound_loopback_nogotsan_test

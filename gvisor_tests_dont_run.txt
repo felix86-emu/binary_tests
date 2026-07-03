@@ -25,3 +25,8 @@ wait_test
 This expects a hardcoded value which isn't true for our CI environment and we can't set it without root perms
 
 proc_pid_oomscore_test
+
+
+These spin the cpu
+socket_inet_loopback_nogotsan_test
+sigaltstack_test
