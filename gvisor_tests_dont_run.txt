@@ -30,3 +30,7 @@ proc_pid_oomscore_test
 These spin the cpu
 socket_inet_loopback_nogotsan_test
 sigaltstack_test
+
+These fail on host
+exec_test
+
