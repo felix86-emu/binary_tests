@@ -17,7 +17,6 @@ mmap_test
 mremap_test
 open_create_test
 open_test
-prctl_test
 preadv2_test
 proc_net_test
 proc_net_udp_test
