@@ -33,4 +33,10 @@ sigaltstack_test
 
 These fail on host
 exec_test
-
+preadv2_test
+pwritev2_test
+socket_abstract_test
+socket_domain_test
+socket_filesystem_test
+socket_ip_tcp_loopback_test
+socket_ip_udp_loopback_test

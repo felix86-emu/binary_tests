@@ -17,12 +17,10 @@ mmap_test
 mremap_test
 open_create_test
 open_test
-preadv2_test
 proc_net_test
 proc_net_udp_test
 proc_test
 ptrace_test
-pwritev2_test
 readahead_test
 rename_test
 seccomp_test
@@ -31,14 +29,9 @@ sendfile_test
 shm_test
 sigaction_test
 sigprocmask_test
-socket_abstract_test
 socket_bind_to_device_distribution_test
 socket_bind_to_device_sequence_test
 socket_bind_to_device_test
-socket_domain_test
-socket_filesystem_test
-socket_ip_tcp_loopback_test
-socket_ip_udp_loopback_test
 socket_netlink_route_test
 socket_unix_pair_test
 stat_test
