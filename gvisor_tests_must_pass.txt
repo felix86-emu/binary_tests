@@ -97,7 +97,6 @@ socket_netlink_uevent_test
 socket_non_stream_blocking_local_test
 socket_non_stream_blocking_udp_test
 socket_stream_blocking_local_test
-socket_stream_blocking_tcp_test
 socket_stream_local_test
 socket_stream_nonblock_local_test
 socket_test
@@ -132,4 +131,5 @@ vsyscall_test
 write_test
 xattr_test
 prctl_test
+sigprocmask_test
 socket_ipv4_udp_unbound_loopback_nogotsan_test

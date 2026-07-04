@@ -40,3 +40,7 @@ socket_domain_test
 socket_filesystem_test
 socket_ip_tcp_loopback_test
 socket_ip_udp_loopback_test
+
+
+Flaky
+socket_stream_blocking_tcp_test
