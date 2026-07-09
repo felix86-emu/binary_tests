@@ -15,13 +15,8 @@
 64/excess-precision-3.c.gcc-target-test-64
 64/pr36578-1.c.gcc-target-test-64
 64/pr36578-2.c.gcc-target-test-64
-64/sse4_1-ceilf-vec.c.gcc-target-test-64
-64/sse4_1-floorf-sfix-vec.c.gcc-target-test-64
-64/sse4_1-floorf-vec.c.gcc-target-test-64
 64/sse4_1-rintf-vec.c.gcc-target-test-64
 64/sse4_1-round-vec.c.gcc-target-test-64
-64/sse4_1-round-sfix-vec.c.gcc-target-test-64
-64/sse4_1-roundf-sfix-vec.c.gcc-target-test-64
 64/sse4_1-roundf-vec.c.gcc-target-test-64
 64/sse4_1-roundps-1.c.gcc-target-test-64
 64/sse4_1-roundps-2.c.gcc-target-test-64
@@ -30,14 +25,7 @@
 64/sse4_1-roundss-2.c.gcc-target-test-64
 64/sse4_1-roundss-3.c.gcc-target-test-64
 64/sse4_1-roundss-4.c.gcc-target-test-64
-64/sse4_1-truncf-vec.c.gcc-target-test-64
-32/sse4_1-ceilf-vec.c.gcc-target-test-32
-32/sse4_1-floorf-sfix-vec.c.gcc-target-test-32
-32/sse4_1-floorf-vec.c.gcc-target-test-32
-32/sse4_1-rintf-vec.c.gcc-target-test-32
 32/sse4_1-round-vec.c.gcc-target-test-32
-32/sse4_1-round-sfix-vec.c.gcc-target-test-32
-32/sse4_1-roundf-sfix-vec.c.gcc-target-test-32
 32/sse4_1-roundf-vec.c.gcc-target-test-32
 32/sse4_1-roundps-1.c.gcc-target-test-32
 32/sse4_1-roundps-2.c.gcc-target-test-32
@@ -46,4 +34,3 @@
 32/sse4_1-roundss-2.c.gcc-target-test-32
 32/sse4_1-roundss-3.c.gcc-target-test-32
 32/sse4_1-roundss-4.c.gcc-target-test-32
-32/sse4_1-truncf-vec.c.gcc-target-test-32
