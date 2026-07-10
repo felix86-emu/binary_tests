@@ -51,3 +51,4 @@ amd64/avx2-1
 amd64/aes
 amd64/bmi
 amd64/movbe
+amd64/fb_test_amd64
