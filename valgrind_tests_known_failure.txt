@@ -1,9 +1,5 @@
 amd64/fma4
 amd64/fxtract
-amd64/filter_cpuid
-amd64/filter_inf_nan
-amd64/filter_stderr
-amd64/faultstatus
 amd64/insn_fpu
 amd64/mpx
 amd64/rdrand
