@@ -169,5 +169,14 @@ else
     echo "bwrap test passed"
 fi
 
+echo "Running dav1d test..."
+DAV1D_OUTPUT=$($FELIX $DIR/dav1d/checkasm)
+RET=$?
+if [ $RET -ne 0 ]; then
+    echo "Failed dav1d test"
+    exit 1
+fi
+echo "dav1d test passed"
+
 echo "All tests passed!"
 exit 0
