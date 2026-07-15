@@ -169,6 +169,7 @@ else
     echo "bwrap test passed"
 fi
 
+ulimit -c unlimited
 echo "Running dav1d test..."
 DAV1D_OUTPUT=$($FELIX $DIR/dav1d/checkasm)
 RET=$?
@@ -178,6 +179,7 @@ if [ $RET -ne 0 ]; then
     exit 1
 fi
 echo "dav1d test passed"
+ulimit -c 0
 
 echo "All tests passed!"
 exit 0
