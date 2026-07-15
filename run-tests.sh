@@ -174,6 +174,7 @@ DAV1D_OUTPUT=$($FELIX $DIR/dav1d/checkasm)
 RET=$?
 if [ $RET -ne 0 ]; then
     echo "Failed dav1d test"
+    echo "dav1d returned: $DAV1D_OUTPUT $RET"
     exit 1
 fi
 echo "dav1d test passed"
