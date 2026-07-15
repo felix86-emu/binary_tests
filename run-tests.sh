@@ -169,6 +169,8 @@ else
     echo "bwrap test passed"
 fi
 
+export FELIX86_QUIET=0
+export FELIX86_PRINT_ALL_SIGNALS=1
 ulimit -c unlimited
 echo "Running dav1d test..."
 DAV1D_OUTPUT=$($FELIX $DIR/dav1d/checkasm)
