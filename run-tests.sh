@@ -171,6 +171,8 @@ fi
 
 export FELIX86_QUIET=0
 export FELIX86_PRINT_ALL_SIGNALS=1
+export FELIX86_CAPTURE_SIGSEGV=1
+export FELIX86_CAPTURE_SIGABRT=1
 ulimit -c unlimited
 echo "Running dav1d test..."
 DAV1D_OUTPUT=$($FELIX $DIR/dav1d/checkasm)
