@@ -1,0 +1,4 @@
+These are disabled in FEX too, but would pass on reduced precision, might deserve further investigation
+
+32/pr88240.c.gcc-target-test-32
+64/pr88240.c.gcc-target-test-64

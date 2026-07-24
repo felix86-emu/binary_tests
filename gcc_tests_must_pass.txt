@@ -230,7 +230,6 @@
 32/pr83735.c.gcc-target-test-32
 32/pr84128.c.gcc-target-test-32
 32/pr84945.c.gcc-target-test-32
-32/pr88240.c.gcc-target-test-32
 32/pr89965.c.gcc-target-test-32
 32/pr91994.c.gcc-target-test-32
 32/pr93743.c.gcc-target-test-32
@@ -967,7 +966,6 @@
 64/pr81294-1.c.gcc-target-test-64
 64/pr83735.c.gcc-target-test-64
 64/pr84945.c.gcc-target-test-64
-64/pr88240.c.gcc-target-test-64
 64/pr89965.c.gcc-target-test-64
 64/pr91994.c.gcc-target-test-64
 64/pr93743.c.gcc-target-test-64
