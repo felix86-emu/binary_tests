@@ -1,6 +1,4 @@
 amd64/fma4
-amd64/fxtract
-amd64/insn_fpu
 amd64/mpx
 amd64/rdrand
 amd64/rdseed
