@@ -1,1 +1,0 @@
-32/mcount_pic.c.gcc-target-test-32
