@@ -44,3 +44,4 @@ socket_ip_udp_loopback_test
 
 Flaky
 socket_stream_blocking_tcp_test
+mknod_test

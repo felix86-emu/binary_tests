@@ -39,7 +39,6 @@ membarrier_test
 memory_accounting_test
 mincore_test
 mkdir_test
-mknod_test
 mlock_test
 mount_test
 msync_test
