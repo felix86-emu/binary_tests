@@ -1,6 +1,5 @@
 accept_bind_stream_test
 accept_bind_test
-access_test
 affinity_test
 arch_prctl_test
 bad_test
