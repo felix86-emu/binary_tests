@@ -7,7 +7,6 @@ exceptions_test
 exec_binary_test
 fork_test
 fpsig_nested_test
-getdents_test
 getrusage_test
 itimer_test
 link_test
