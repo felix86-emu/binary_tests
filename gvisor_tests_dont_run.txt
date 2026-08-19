@@ -46,3 +46,45 @@ Flaky
 socket_stream_blocking_tcp_test
 mknod_test
 access_test
+prctl_test
+
+Test prctl_test failed with 1.
+Output:
+felix86 26.09 (a15f45d)
+Linux 6.18
+Environment:
+FELIX86_ROOTFS=/opt/felix86/rootfs-26
+FELIX86_THUNKS=/opt/felix86/lib
+FELIX86_PRINT_SIGNALS=true
+FELIX86_ALWAYS_TSO=true
+Extensions enabled for the recompiler: g,v,c,Zba,Zbb,Zbs,Zbc,zicond,zfa,zvbb,zvbc,zvkned,zvfhmin,zicclsm
+[==========] Running 8 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 8 tests from PrctlTest
+[ RUN      ] PrctlTest.NameInitialized
+[       OK ] PrctlTest.NameInitialized (7 ms)
+[ RUN      ] PrctlTest.SetNameLongName
+[       OK ] PrctlTest.SetNameLongName (2 ms)
+[ RUN      ] PrctlTest.ChildProcessName
+[       OK ] PrctlTest.ChildProcessName (7 ms)
+[ RUN      ] PrctlTest.NoNewPrivsPreservedAcrossCloneForkAndExecve
+[       OK ] PrctlTest.NoNewPrivsPreservedAcrossCloneForkAndExecve (250 ms)
+[ RUN      ] PrctlTest.PDeathSig
+test/syscalls/linux/prctl.cc:173: Failure
+Value of: ptrace(PTRACE_DETACH, child_pid, 0, 0)
+Expected: not -1 (success)
+  Actual: -1 (of type long), with errno PosixError(errno=17 File exists)
+[  FAILED  ] PrctlTest.PDeathSig (58 ms)
+[ RUN      ] PrctlTest.InvalidPrSetMM
+[       OK ] PrctlTest.InvalidPrSetMM (7 ms)
+[ RUN      ] PrctlTest.SetGetDumpability
+[       OK ] PrctlTest.SetGetDumpability (2 ms)
+[ RUN      ] PrctlTest.RootDumpability
+[       OK ] PrctlTest.RootDumpability (1 ms)
+[----------] 8 tests from PrctlTest (338 ms total)
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test suite ran. (350 ms total)
+[  PASSED  ] 7 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] PrctlTest.PDeathSig
+ 1 FAILED TEST
