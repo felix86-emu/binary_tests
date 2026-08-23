@@ -131,3 +131,4 @@ xattr_test
 sigprocmask_test
 getdents_test
 socket_ipv4_udp_unbound_loopback_nogotsan_test
+sigaction_test

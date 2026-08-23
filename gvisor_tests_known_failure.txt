@@ -26,7 +26,6 @@ seccomp_test
 semaphore_test
 sendfile_test
 shm_test
-sigaction_test
 socket_bind_to_device_distribution_test
 socket_bind_to_device_sequence_test
 socket_bind_to_device_test
