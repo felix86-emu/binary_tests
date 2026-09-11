@@ -132,3 +132,7 @@ sigprocmask_test
 getdents_test
 socket_ipv4_udp_unbound_loopback_nogotsan_test
 sigaction_test
+socket_stream_blocking_tcp_test
+mknod_test
+access_test
+prctl_test

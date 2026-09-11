@@ -85,7 +85,6 @@ fi
 # cd "$current_dir"
 
 export FELIX86_ALWAYS_TSO=1
-export TEST_TMPDIR=$(mktemp -d)
 
 
 xargs -P$(nproc) -I{} sh -c "$current_dir/run-single-test.sh $FELIX $DIR/fex-gvisor-tests-bins/ {} 0" < "$current_dir/gvisor_tests_must_pass.txt"
