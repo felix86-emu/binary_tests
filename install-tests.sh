@@ -12,38 +12,28 @@ fi
 mkdir -p $DIR
 
 download_and_unzip() {
-    local URL="$1"
-    echo "Downloading $URL..."
-    curl -L "$URL" -o - > $DIR/downloading.zip
+    local NAME="$1"
+    local URL="https://cdn.felix86.com/tests/$NAME"
+    local ETAG="$DIR/.$NAME.etag"
+    echo "Checking $URL..."
+    local CODE
+    CODE=$(curl -fsSL --etag-compare "$ETAG" --etag-save "$ETAG.new" -o $DIR/downloading.zip -w '%{http_code}' "$URL")
+    if [[ "$CODE" == "304" ]]; then
+        echo "$NAME already at the latest version"
+        rm -f "$ETAG.new" $DIR/downloading.zip
+        return
+    fi
     echo "Downloaded"
     echo "Unzipping..."
     unzip -qq -o -d $DIR $DIR/downloading.zip
     echo "Unzipped"
     rm $DIR/downloading.zip
+    mv "$ETAG.new" "$ETAG"
 }
 
-SHOULD_DOWNLOAD=0
-echo "Getting version.txt..."
-curl -sL https://cdn.felix86.com/tests/version.txt > $DIR/version.txt.tmp
-if [[ ! -f "$DIR/version.txt" ]]; then
-    echo "First time downloading test binaries!"
-    SHOULD_DOWNLOAD=1
-else
-    if [[ "$(cat "$DIR/version.txt.tmp")" != "$(cat "$DIR/version.txt")" ]]; then
-        echo "Test binary version changed, starting new download"
-        SHOULD_DOWNLOAD=1
-    fi
-fi
-
-if [[ $SHOULD_DOWNLOAD -eq 1 ]]; then
-    download_and_unzip "https://cdn.felix86.com/tests/felix86-binary-tests.zip"
-    download_and_unzip "https://cdn.felix86.com/tests/libuv-tests.zip"
-    download_and_unzip "https://cdn.felix86.com/tests/runtimes.zip"
-    download_and_unzip "https://cdn.felix86.com/tests/signal_tests.zip"
-    download_and_unzip "https://cdn.felix86.com/tests/bwrap.zip"
-    download_and_unzip "https://cdn.felix86.com/tests/dav1d.zip"
-    mv $DIR/version.txt.tmp $DIR/version.txt
-else
-    echo "Test binaries already at the latest version!"
-    rm $DIR/version.txt.tmp
-fi
+download_and_unzip "felix86-binary-tests.zip"
+download_and_unzip "libuv-tests.zip"
+download_and_unzip "runtimes.zip"
+download_and_unzip "signal_tests.zip"
+download_and_unzip "bwrap.zip"
+download_and_unzip "dav1d.zip"

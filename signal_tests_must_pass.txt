@@ -14,6 +14,8 @@ frame-alignment-32.out
 frame-alignment-64.out
 illegal-cs-32.out
 illegal-cs-64.out
+int0x80-from-64-32.out
+int0x80-from-64-64.out
 longjmp-no-overflow-32.out
 longjmp-no-overflow-64.out
 mask-all-32.out
@@ -42,6 +44,7 @@ rt-sigaction-oldact-32.out
 rt-sigaction-oldact-64.out
 same-signal-32.out
 same-signal-64.out
+sbrk-growth-32.out
 segments-32.out
 segments-64.out
 segv-cr2-32.out
@@ -68,6 +71,7 @@ signal-table-thread-32.out
 signal-table-thread-64.out
 sigqueueinfo-32.out
 sigqueueinfo-64.out
+sigreturn-same-rip-mode-switch-32.out
 sigsuspend-mask-32.out
 sigsuspend-mask-64.out
 sigsuspend-multiple-32.out
@@ -76,6 +80,10 @@ sigsuspend-pc-rax-32.out
 sigsuspend-pc-rax-64.out
 sigwait-sigpending-32.out
 sigwait-sigpending-64.out
+smc-partial-mprotect-32.out
+smc-partial-mprotect-64.out
+smc-partial-mprotect-rx-32.out
+smc-partial-mprotect-rx-64.out
 synchronous-div-zero-32.out
 synchronous-div-zero-64.out
 synchronous-high-address-32.out
@@ -98,6 +106,10 @@ thread-inherit-32.out
 thread-inherit-64.out
 trap-flag-32.out
 trap-flag-64.out
+trap-flag-popf-clear-32.out
+trap-flag-popf-clear-64.out
+trap-flag-popf-repeat-32.out
+trap-flag-popf-repeat-64.out
 two-signals-32.out
 two-signals-64.out
 two-signals-alt-stack-32.out
@@ -106,14 +118,14 @@ two-signals-alt-stack-disarm-32.out
 two-signals-alt-stack-disarm-64.out
 uc-flags-32.out
 uc-flags-64.out
+uc_mask-32.out
+uc_mask-64.out
 uc-oldmask-32.out
 uc-oldmask-64.out
 uc-stack-always-32.out
 uc-stack-always-64.out
 uc-stack-restore-32.out
 uc-stack-restore-64.out
-uc_mask-32.out
-uc_mask-64.out
 xstate-bv-sse-32.out
 xstate-bv-sse-64.out
 xstate-bv-x87-32.out
