@@ -32,7 +32,6 @@ socket_bind_to_device_test
 socket_netlink_route_test
 socket_unix_pair_test
 stat_test
-symlink_test
 syslog_test
 sysret_test
 timers_test
