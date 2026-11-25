@@ -55,3 +55,4 @@ amd64/fb_test_amd64
 amd64/faultstatus
 amd64/fxtract
 amd64/insn_fpu
+amd64/mpx

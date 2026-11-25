@@ -1,5 +1,4 @@
 amd64/fma4
-amd64/mpx
 amd64/rdrand
 amd64/rdseed
 amd64/tm1
